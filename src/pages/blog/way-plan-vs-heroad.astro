@@ -14,7 +14,7 @@ const jsonLd = {
 
 const comparison = [
   { critere: 'Spécialisation VTC', wayplan: 'Oui', heroad: 'Oui', wayplanColor: 'text-success', heroadColor: 'text-success' },
-  { critere: 'Dispatch intelligent', wayplan: 'Basique', heroad: 'Avancé', wayplanColor: 'text-yellow-500', heroadColor: 'text-success' },
+  { critere: 'Dispatch simplifié', wayplan: 'Basique', heroad: 'Oui', wayplanColor: 'text-yellow-500', heroadColor: 'text-success' },
   { critere: 'Synchronisation calendrier', wayplan: 'Non', heroad: 'Oui', wayplanColor: 'text-gray-400', heroadColor: 'text-success' },
   { critere: 'App chauffeur dédiée', wayplan: 'Non', heroad: 'Oui', wayplanColor: 'text-gray-400', heroadColor: 'text-success' },
   { critere: 'Gratuit pour indépendants', wayplan: 'Non', heroad: 'Oui', wayplanColor: 'text-gray-400', heroadColor: 'text-success' },
@@ -86,7 +86,7 @@ const comparison = [
         <ul class="space-y-3 mb-6">
           <li class="flex items-start gap-3">
             <svg class="w-5 h-5 text-success shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-            <span class="text-text-muted"><strong class="text-primary">Dispatch avancé</strong> — Assignation automatique basée sur la disponibilité et la localisation, pas juste un envoi manuel</span>
+            <span class="text-text-muted"><strong class="text-primary">Dispatch simplifié</strong> — Assignation en quelques clics avec une interface pensée pour le VTC, pas un logiciel généraliste</span>
           </li>
           <li class="flex items-start gap-3">
             <svg class="w-5 h-5 text-success shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
@@ -116,7 +116,7 @@ const comparison = [
           <div class="p-6 rounded-xl border-2 border-accent/30 bg-accent/5">
             <h3 class="font-bold text-primary mb-3">Choisissez Heroad si :</h3>
             <ul class="space-y-2 text-sm text-text-muted">
-              <li>— Vous voulez un dispatch intelligent</li>
+              <li>— Vous voulez un dispatch simplifié</li>
               <li>— La synchro calendrier est importante</li>
               <li>— Vous gérez des partenaires externes</li>
               <li>— Vous êtes chauffeur indépendant (gratuit !)</li>
@@ -126,7 +126,7 @@ const comparison = [
 
         <h2 class="text-2xl font-extrabold text-primary mt-12 mb-4">Verdict</h2>
         <p class="text-text-muted leading-relaxed">
-          Way-Plan est une bonne solution de base pour le VTC. Heroad est plus moderne, plus complet et mieux adapté aux besoins actuels des sociétés VTC : dispatch automatique, synchronisation mobile, et un modèle tarifaire plus accessible.
+          Way-Plan est une bonne solution de base pour le VTC. Heroad est plus moderne, plus complet et mieux adapté aux besoins actuels des sociétés VTC : dispatch simplifié, synchronisation mobile, et un modèle tarifaire plus accessible.
         </p>
         <p class="text-text-muted leading-relaxed mt-4">
           Le meilleur moyen de se faire un avis ? <a href="https://app.heroad.app" class="text-accent hover:text-accent-dark font-semibold">Essayer Heroad gratuitement pendant 14 jours</a>, sans engagement et sans carte bancaire.
