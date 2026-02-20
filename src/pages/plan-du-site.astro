@@ -1,0 +1,68 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const sections = [
+  {
+    title: 'Pages principales',
+    links: [
+      { label: 'Accueil', href: '/', description: 'Logiciel de gestion de flotte VTC & Transport de personnes' },
+    ]
+  },
+  {
+    title: 'Produit',
+    links: [
+      { label: 'Gestion de flotte', href: '/gestion-flotte', description: 'Suivi vehicules, planification, gestion chauffeurs et partenaires' },
+      { label: 'Dispatch & Planification', href: '/dispatch-missions', description: 'Assignation automatique des missions, suivi temps reel' },
+      { label: 'App chauffeur', href: '/app-chauffeur', description: 'Application mobile pour chauffeurs VTC, synchro calendrier iOS' },
+    ]
+  },
+  {
+    title: 'Blog & Ressources',
+    links: [
+      { label: 'Guide complet : Gestion de flotte VTC', href: '/blog/gestion-flotte-vtc-guide-complet', description: 'Tout savoir pour gerer efficacement une flotte VTC' },
+      { label: 'Way-Plan vs Heroad', href: '/blog/way-plan-vs-heroad', description: 'Comparatif detaille des deux solutions' },
+    ]
+  },
+  {
+    title: 'Informations',
+    links: [
+      { label: 'Mentions legales', href: '/mentions-legales', description: '' },
+      { label: 'Politique de confidentialite', href: '/confidentialite', description: '' },
+    ]
+  }
+];
+---
+
+<Layout
+  title="Plan du site - Heroad"
+  description="Plan du site Heroad : retrouvez toutes les pages du site, produit, blog et ressources."
+>
+  <section class="py-16 sm:py-20">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-primary mb-12">Plan du site</h1>
+
+      <div class="space-y-10">
+        {sections.map(section => (
+          <div>
+            <h2 class="text-lg font-bold text-primary mb-4 pb-2 border-b border-gray-100">{section.title}</h2>
+            <ul class="space-y-3">
+              {section.links.map(link => (
+                <li>
+                  <a href={link.href} class="group flex items-start gap-3">
+                    <svg class="w-4 h-4 text-accent shrink-0 mt-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                    <div>
+                      <span class="font-medium text-primary group-hover:text-accent transition-colors">{link.label}</span>
+                      {link.description && <p class="text-sm text-text-muted mt-0.5">{link.description}</p>}
+                    </div>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>
