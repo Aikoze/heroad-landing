@@ -1,36 +1,57 @@
 ---
 const navLinks = [
-  { label: 'Gestion de flotte', href: '/gestion-flotte' },
-  { label: 'Dispatch', href: '/dispatch-missions' },
-  { label: 'App chauffeur', href: '/app-chauffeur' },
-  { label: 'Blog', href: '/blog/gestion-flotte-vtc-guide-complet' },
+  { label: "Gestion de flotte", href: "/gestion-flotte" },
+  { label: "Dispatch", href: "/dispatch-missions" },
+  { label: "App chauffeur", href: "/app-chauffeur" },
+  { label: "Blog", href: "/blog/gestion-flotte-vtc-guide-complet" },
 ];
 ---
 
-<header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg border-b border-gray-100">
-  <nav class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+<header
+  class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg border-b border-gray-100"
+>
+  <nav
+    class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between"
+  >
     <!-- Logo -->
-    <a href="/" class="flex items-center gap-2 font-extrabold text-xl text-primary">
-      <img src="/logo.svg" alt="Heroad" width="32" height="32" class="shrink-0" />
+    <a
+      href="/"
+      class="flex items-center gap-2 font-extrabold text-xl text-primary"
+    >
+      <img
+        src="/logo-circle.svg"
+        alt="Heroad"
+        width="32"
+        height="32"
+        class="shrink-0 invert"
+      />
       Heroad
     </a>
 
     <!-- Desktop nav -->
     <div class="hidden md:flex items-center gap-8">
-      {navLinks.map(link => (
-        <a href={link.href} class="text-sm font-medium text-text-muted hover:text-primary transition-colors">
-          {link.label}
-        </a>
-      ))}
+      {
+        navLinks.map((link) => (
+          <a
+            href={link.href}
+            class="text-sm font-medium text-text-muted hover:text-primary transition-colors"
+          >
+            {link.label}
+          </a>
+        ))
+      }
     </div>
 
     <!-- CTA -->
     <div class="flex items-center gap-3">
-      <a href="https://app.heroad.app" class="hidden sm:inline-flex text-sm font-medium text-text-muted hover:text-primary transition-colors">
+      <a
+        href="https://pro.heroad.app"
+        class="hidden sm:inline-flex text-sm font-medium text-text-muted hover:text-primary transition-colors"
+      >
         Se connecter
       </a>
       <a
-        href="https://app.heroad.app"
+        href="https://pro.heroad.app"
         class="inline-flex items-center px-4 py-2 rounded-lg bg-primary text-white text-sm font-semibold hover:bg-primary-light transition-colors"
       >
         Essai gratuit
@@ -43,20 +64,40 @@ const navLinks = [
       class="md:hidden ml-2 p-2 rounded-lg hover:bg-gray-100 transition-colors"
       aria-label="Menu"
     >
-      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      <svg
+        class="w-5 h-5"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"></path>
       </svg>
     </button>
   </nav>
 
   <!-- Mobile menu -->
-  <div id="mobile-menu" class="hidden md:hidden border-t border-gray-100 bg-white px-4 pb-4">
-    {navLinks.map(link => (
-      <a href={link.href} class="block py-3 text-sm font-medium text-text-muted hover:text-primary border-b border-gray-50 last:border-0">
-        {link.label}
-      </a>
-    ))}
-    <a href="https://app.heroad.app" class="block py-3 text-sm font-medium text-text-muted hover:text-primary">
+  <div
+    id="mobile-menu"
+    class="hidden md:hidden border-t border-gray-100 bg-white px-4 pb-4"
+  >
+    {
+      navLinks.map((link) => (
+        <a
+          href={link.href}
+          class="block py-3 text-sm font-medium text-text-muted hover:text-primary border-b border-gray-50 last:border-0"
+        >
+          {link.label}
+        </a>
+      ))
+    }
+    <a
+      href="https://pro.heroad.app"
+      class="block py-3 text-sm font-medium text-text-muted hover:text-primary"
+    >
       Se connecter
     </a>
   </div>
@@ -65,9 +106,9 @@ const navLinks = [
 <div class="h-16"></div>
 
 <script>
-  const btn = document.getElementById('mobile-menu-btn');
-  const menu = document.getElementById('mobile-menu');
-  btn?.addEventListener('click', () => {
-    menu?.classList.toggle('hidden');
+  const btn = document.getElementById("mobile-menu-btn");
+  const menu = document.getElementById("mobile-menu");
+  btn?.addEventListener("click", () => {
+    menu?.classList.toggle("hidden");
   });
 </script>

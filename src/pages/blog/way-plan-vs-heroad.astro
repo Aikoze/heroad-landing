@@ -1,25 +1,68 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import Layout from "../../layouts/Layout.astro";
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Way-Plan vs Heroad : Quel logiciel VTC choisir en 2026 ?",
-  "description": "Comparaison détaillée : Way-Plan vs Heroad. Fonctionnalités, tarifs, spécialisation.",
-  "author": { "@type": "Organization", "name": "Heroad" },
-  "publisher": { "@type": "Organization", "name": "Heroad" },
-  "datePublished": "2026-02-20",
-  "dateModified": "2026-02-20"
+  headline: "Way-Plan vs Heroad : Quel logiciel VTC choisir en 2026 ?",
+  description:
+    "Comparaison détaillée : Way-Plan vs Heroad. Fonctionnalités, tarifs, spécialisation.",
+  author: { "@type": "Organization", name: "Heroad" },
+  publisher: { "@type": "Organization", name: "Heroad" },
+  datePublished: "2026-02-20",
+  dateModified: "2026-02-20",
 };
 
 const comparison = [
-  { critere: 'Spécialisation VTC', wayplan: 'Oui', heroad: 'Oui', wayplanColor: 'text-success', heroadColor: 'text-success' },
-  { critere: 'Dispatch simplifié', wayplan: 'Basique', heroad: 'Oui', wayplanColor: 'text-yellow-500', heroadColor: 'text-success' },
-  { critere: 'Synchronisation calendrier', wayplan: 'Non', heroad: 'Oui', wayplanColor: 'text-gray-400', heroadColor: 'text-success' },
-  { critere: 'App chauffeur dédiée', wayplan: 'Non', heroad: 'Oui', wayplanColor: 'text-gray-400', heroadColor: 'text-success' },
-  { critere: 'Gratuit pour indépendants', wayplan: 'Non', heroad: 'Oui', wayplanColor: 'text-gray-400', heroadColor: 'text-success' },
-  { critere: 'Gestion des partenaires', wayplan: 'Limité', heroad: 'Complet', wayplanColor: 'text-yellow-500', heroadColor: 'text-success' },
-  { critere: 'Tarif de base', wayplan: 'À partir de 49\u20ac/mois', heroad: 'Gratuit', wayplanColor: 'text-text-muted', heroadColor: 'text-success font-semibold' },
+  {
+    critere: "Spécialisation VTC",
+    wayplan: "Oui",
+    heroad: "Oui",
+    wayplanColor: "text-success",
+    heroadColor: "text-success",
+  },
+  {
+    critere: "Dispatch simplifié",
+    wayplan: "Basique",
+    heroad: "Oui",
+    wayplanColor: "text-yellow-500",
+    heroadColor: "text-success",
+  },
+  {
+    critere: "Synchronisation calendrier",
+    wayplan: "Non",
+    heroad: "Oui",
+    wayplanColor: "text-gray-400",
+    heroadColor: "text-success",
+  },
+  {
+    critere: "App chauffeur dédiée",
+    wayplan: "Non",
+    heroad: "Oui",
+    wayplanColor: "text-gray-400",
+    heroadColor: "text-success",
+  },
+  {
+    critere: "Gratuit pour indépendants",
+    wayplan: "Non",
+    heroad: "Oui",
+    wayplanColor: "text-gray-400",
+    heroadColor: "text-success",
+  },
+  {
+    critere: "Gestion des partenaires",
+    wayplan: "Limité",
+    heroad: "Complet",
+    wayplanColor: "text-yellow-500",
+    heroadColor: "text-success",
+  },
+  {
+    critere: "Tarif de base",
+    wayplan: "À partir de 49\u20ac/mois",
+    heroad: "Gratuit",
+    wayplanColor: "text-text-muted",
+    heroadColor: "text-success font-semibold",
+  },
 ];
 ---
 
@@ -37,76 +80,170 @@ const comparison = [
         <span class="text-primary font-medium">Blog</span>
       </nav>
 
-      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary leading-tight">
+      <h1
+        class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary leading-tight"
+      >
         Way-Plan vs Heroad : Quel logiciel VTC choisir ?
       </h1>
-      <p class="mt-4 text-lg text-text-muted">Publié le 20 février 2026 &middot; 5 min de lecture</p>
+      <p class="mt-4 text-lg text-text-muted">
+        Publié le 20 février 2026 &middot; 5 min de lecture
+      </p>
 
       <div class="mt-10">
         <p class="text-lg text-text-muted leading-relaxed">
-          Vous hésitez entre Way-Plan et Heroad ? Ce guide compare les deux solutions pour vous aider à choisir le meilleur logiciel pour votre activité VTC.
+          Vous hésitez entre Way-Plan et Heroad ? Ce guide compare les deux
+          solutions pour vous aider à choisir le meilleur logiciel pour votre
+          activité VTC.
         </p>
 
-        <h2 class="text-2xl font-extrabold text-primary mt-12 mb-4">Comparaison détaillée</h2>
+        <h2 class="text-2xl font-extrabold text-primary mt-12 mb-4">
+          Comparaison détaillée
+        </h2>
         <p class="text-text-muted mb-6">
           Voici un comparatif point par point des deux solutions :
         </p>
 
         <!-- Comparison table -->
-        <div class="overflow-x-auto rounded-2xl border border-gray-200 bg-white">
+        <div
+          class="overflow-x-auto rounded-2xl border border-gray-200 bg-white"
+        >
           <table class="w-full text-sm">
             <thead>
               <tr class="border-b border-gray-100">
-                <th class="text-left py-4 px-6 font-semibold text-text-muted">Critère</th>
-                <th class="text-center py-4 px-6 font-semibold text-text-muted">Way-Plan</th>
-                <th class="text-center py-4 px-6 font-bold text-primary bg-accent/5">Heroad</th>
+                <th class="text-left py-4 px-6 font-semibold text-text-muted"
+                  >Critère</th
+                >
+                <th class="text-center py-4 px-6 font-semibold text-text-muted"
+                  >Way-Plan</th
+                >
+                <th
+                  class="text-center py-4 px-6 font-bold text-primary bg-accent/5"
+                  >Heroad</th
+                >
               </tr>
             </thead>
             <tbody>
-              {comparison.map(row => (
-                <tr class="border-b border-gray-50 last:border-0">
-                  <td class="py-4 px-6 font-medium text-primary">{row.critere}</td>
-                  <td class={`py-4 px-6 text-center ${row.wayplanColor}`}>{row.wayplan}</td>
-                  <td class={`py-4 px-6 text-center bg-accent/5 ${row.heroadColor}`}>{row.heroad}</td>
-                </tr>
-              ))}
+              {
+                comparison.map((row) => (
+                  <tr class="border-b border-gray-50 last:border-0">
+                    <td class="py-4 px-6 font-medium text-primary">
+                      {row.critere}
+                    </td>
+                    <td class={`py-4 px-6 text-center ${row.wayplanColor}`}>
+                      {row.wayplan}
+                    </td>
+                    <td
+                      class={`py-4 px-6 text-center bg-accent/5 ${row.heroadColor}`}
+                    >
+                      {row.heroad}
+                    </td>
+                  </tr>
+                ))
+              }
             </tbody>
           </table>
         </div>
 
-        <h2 class="text-2xl font-extrabold text-primary mt-12 mb-4">Way-Plan : ce qu'il fait bien</h2>
+        <h2 class="text-2xl font-extrabold text-primary mt-12 mb-4">
+          Way-Plan : ce qu'il fait bien
+        </h2>
         <p class="text-text-muted leading-relaxed">
-          Way-Plan est une solution établie sur le marché français du VTC. Il propose des fonctionnalités de base pour la gestion des missions et la facturation. C'est un choix correct pour les sociétés qui cherchent un outil simple et éprouvé.
+          Way-Plan est une solution établie sur le marché français du VTC. Il
+          propose des fonctionnalités de base pour la gestion des missions et la
+          facturation. C'est un choix correct pour les sociétés qui cherchent un
+          outil simple et éprouvé.
         </p>
 
-        <h2 class="text-2xl font-extrabold text-primary mt-12 mb-4">Heroad : ce qui fait la différence</h2>
+        <h2 class="text-2xl font-extrabold text-primary mt-12 mb-4">
+          Heroad : ce qui fait la différence
+        </h2>
         <p class="text-text-muted leading-relaxed mb-4">
           Heroad va plus loin sur plusieurs points clés :
         </p>
         <ul class="space-y-3 mb-6">
           <li class="flex items-start gap-3">
-            <svg class="w-5 h-5 text-success shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-            <span class="text-text-muted"><strong class="text-primary">Dispatch simplifié</strong> — Assignation en quelques clics avec une interface pensée pour le VTC, pas un logiciel généraliste</span>
+            <svg
+              class="w-5 h-5 text-success shrink-0 mt-1"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 13l4 4L19 7"></path></svg
+            >
+            <span class="text-text-muted"
+              ><strong class="text-primary">Dispatch simplifié</strong> — Assignation
+              en quelques clics avec une interface pensée pour le VTC, pas un logiciel
+              généraliste</span
+            >
           </li>
           <li class="flex items-start gap-3">
-            <svg class="w-5 h-5 text-success shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-            <span class="text-text-muted"><strong class="text-primary">Synchronisation calendrier</strong> — Les missions se retrouvent directement dans le calendrier iOS ou Android, une fonctionnalité unique sur le marché</span>
+            <svg
+              class="w-5 h-5 text-success shrink-0 mt-1"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 13l4 4L19 7"></path></svg
+            >
+            <span class="text-text-muted"
+              ><strong class="text-primary">Synchronisation calendrier</strong> —
+              Les missions se retrouvent directement dans le calendrier iOS ou Android,
+              une fonctionnalité unique sur le marché</span
+            >
           </li>
           <li class="flex items-start gap-3">
-            <svg class="w-5 h-5 text-success shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-            <span class="text-text-muted"><strong class="text-primary">Gratuit pour les indépendants</strong> — Les chauffeurs indépendants ne paient rien, contrairement à Way-Plan qui demande un abonnement dès le départ</span>
+            <svg
+              class="w-5 h-5 text-success shrink-0 mt-1"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 13l4 4L19 7"></path></svg
+            >
+            <span class="text-text-muted"
+              ><strong class="text-primary"
+                >Gratuit pour les indépendants</strong
+              > — Les chauffeurs indépendants ne paient rien, contrairement à Way-Plan
+              qui demande un abonnement dès le départ</span
+            >
           </li>
           <li class="flex items-start gap-3">
-            <svg class="w-5 h-5 text-success shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-            <span class="text-text-muted"><strong class="text-primary">Gestion des partenaires</strong> — Accès dédié pour chaque partenaire avec des permissions fines</span>
+            <svg
+              class="w-5 h-5 text-success shrink-0 mt-1"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 13l4 4L19 7"></path></svg
+            >
+            <span class="text-text-muted"
+              ><strong class="text-primary">Gestion des partenaires</strong> — Accès
+              dédié pour chaque partenaire avec des permissions fines</span
+            >
           </li>
         </ul>
 
-        <h2 class="text-2xl font-extrabold text-primary mt-12 mb-4">Pour qui choisir quoi ?</h2>
+        <h2 class="text-2xl font-extrabold text-primary mt-12 mb-4">
+          Pour qui choisir quoi ?
+        </h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
           <div class="p-6 rounded-xl border border-gray-200 bg-surface">
-            <h3 class="font-bold text-primary mb-3">Choisissez Way-Plan si :</h3>
+            <h3 class="font-bold text-primary mb-3">
+              Choisissez Way-Plan si :
+            </h3>
             <ul class="space-y-2 text-sm text-text-muted">
               <li>— Vous utilisez déjà leur solution</li>
               <li>— Vous n'avez pas besoin de synchro calendrier</li>
@@ -126,20 +263,33 @@ const comparison = [
 
         <h2 class="text-2xl font-extrabold text-primary mt-12 mb-4">Verdict</h2>
         <p class="text-text-muted leading-relaxed">
-          Way-Plan est une bonne solution de base pour le VTC. Heroad est plus moderne, plus complet et mieux adapté aux besoins actuels des sociétés VTC : dispatch simplifié, synchronisation mobile, et un modèle tarifaire plus accessible.
+          Way-Plan est une bonne solution de base pour le VTC. Heroad est plus
+          moderne, plus complet et mieux adapté aux besoins actuels des sociétés
+          VTC : dispatch simplifié, synchronisation mobile, et un modèle
+          tarifaire plus accessible.
         </p>
         <p class="text-text-muted leading-relaxed mt-4">
-          Le meilleur moyen de se faire un avis ? <a href="https://app.heroad.app" class="text-accent hover:text-accent-dark font-semibold">Essayer Heroad gratuitement pendant 14 jours</a>, sans engagement et sans carte bancaire.
+          Le meilleur moyen de se faire un avis ? <a
+            href="https://pro.heroad.app"
+            class="text-accent hover:text-accent-dark font-semibold"
+            >Essayer Heroad gratuitement pendant 14 jours</a
+          >, sans engagement et sans carte bancaire.
         </p>
       </div>
 
       <!-- CTA inline -->
       <div class="mt-12 p-8 rounded-2xl bg-primary text-center">
-        <h3 class="text-2xl font-extrabold text-white mb-3">Prêt à essayer Heroad ?</h3>
-        <p class="text-gray-300 mb-6">14 jours gratuits, sans carte bancaire.</p>
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <h3 class="text-2xl font-extrabold text-white mb-3">
+          Prêt à essayer Heroad ?
+        </h3>
+        <p class="text-gray-300 mb-6">
+          14 jours gratuits, sans carte bancaire.
+        </p>
+        <div
+          class="flex flex-col sm:flex-row items-center justify-center gap-4"
+        >
           <a
-            href="https://app.heroad.app"
+            href="https://pro.heroad.app"
             class="inline-flex items-center px-8 py-3.5 rounded-xl bg-accent text-primary text-base font-bold hover:bg-accent-dark transition-colors"
           >
             Essayer Heroad gratuitement

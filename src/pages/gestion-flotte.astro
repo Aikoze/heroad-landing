@@ -1,45 +1,70 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import CTA from '../components/CTA.astro';
+import Layout from "../layouts/Layout.astro";
+import CTA from "../components/CTA.astro";
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Product",
-  "name": "Heroad - Gestion de flotte VTC",
-  "description": "Logiciel de gestion de flotte spécialisé VTC et transport de personnes",
-  "brand": { "@type": "Brand", "name": "Heroad" },
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+  name: "Heroad - Gestion de flotte VTC",
+  description:
+    "Logiciel de gestion de flotte spécialisé VTC et transport de personnes",
+  brand: { "@type": "Brand", name: "Heroad" },
+  offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" },
 };
 
 const features = [
   {
-    title: 'Suivi en temps réel de vos véhicules',
-    description: 'Localisez chaque véhicule de votre flotte en temps réel. Recevez des notifications pour les missions urgentes ou les problèmes de disponibilité.',
-    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`
+    title: "Suivi en temps réel de vos véhicules",
+    description:
+      "Localisez chaque véhicule de votre flotte en temps réel. Recevez des notifications pour les missions urgentes ou les problèmes de disponibilité.",
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
   },
   {
-    title: 'Planification intelligente des missions',
-    description: 'Assignez vos missions aux chauffeurs disponibles en quelques clics. Optimisez les trajets et réduisez les temps d\'attente.',
-    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>`
+    title: "Planification intelligente des missions",
+    description:
+      "Assignez vos missions aux chauffeurs disponibles en quelques clics. Optimisez les trajets et réduisez les temps d'attente.",
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>`,
   },
   {
-    title: 'Gestion des chauffeurs et partenaires',
-    description: 'Créez des accès dédiés pour vos partenaires. Ils gèrent leurs missions sans accéder à vos données sensibles.',
-    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>`
+    title: "Gestion des chauffeurs et partenaires",
+    description:
+      "Créez des accès dédiés pour vos partenaires. Ils gèrent leurs missions sans accéder à vos données sensibles.",
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>`,
   },
   {
-    title: 'Synchronisation calendrier iOS et Android',
-    description: 'Les missions s\'ajoutent automatiquement au calendrier de vos chauffeurs. Ils voient leurs plannings sans quitter leur app préférée.',
-    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>`
-  }
+    title: "Synchronisation calendrier iOS et Android",
+    description:
+      "Les missions s'ajoutent automatiquement au calendrier de vos chauffeurs. Ils voient leurs plannings sans quitter leur app préférée.",
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>`,
+  },
 ];
 
 const comparison = [
-  { feature: 'Spécialisé VTC', heroad: true, fleetnote: false, gac: false },
-  { feature: 'Dispatch simplifié', heroad: true, fleetnote: false, gac: 'partial' },
-  { feature: 'Synchronisation calendrier', heroad: true, fleetnote: false, gac: false },
-  { feature: 'Gratuit pour indépendants', heroad: true, fleetnote: false, gac: false },
-  { feature: 'Tarif', heroad: 'Gratuit - Premium', fleetnote: 'À partir de 99\u20ac/mois', gac: 'Sur devis' }
+  { feature: "Spécialisé VTC", heroad: true, fleetnote: false, gac: false },
+  {
+    feature: "Dispatch simplifié",
+    heroad: true,
+    fleetnote: false,
+    gac: "partial",
+  },
+  {
+    feature: "Synchronisation calendrier",
+    heroad: true,
+    fleetnote: false,
+    gac: false,
+  },
+  {
+    feature: "Gratuit pour indépendants",
+    heroad: true,
+    fleetnote: false,
+    gac: false,
+  },
+  {
+    feature: "Tarif",
+    heroad: "Gratuit - Premium",
+    fleetnote: "À partir de 99\u20ac/mois",
+    gac: "Sur devis",
+  },
 ];
 ---
 
@@ -49,24 +74,49 @@ const comparison = [
   jsonLd={jsonLd}
 >
   <!-- HERO -->
-  <section class="relative overflow-hidden bg-gradient-to-b from-primary to-primary-light py-20 sm:py-24">
+  <section
+    class="relative overflow-hidden bg-gradient-to-b from-primary to-primary-light py-20 sm:py-24"
+  >
     <div class="absolute inset-0 opacity-5">
-      <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 40px 40px;"></div>
+      <div
+        class="absolute inset-0"
+        style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 40px 40px;"
+      >
+      </div>
     </div>
     <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
       <div class="max-w-3xl">
-        <a href="/" class="inline-flex items-center gap-2 text-sm text-accent hover:text-accent-dark transition-colors mb-6">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        <a
+          href="/"
+          class="inline-flex items-center gap-2 text-sm text-accent hover:text-accent-dark transition-colors mb-6"
+        >
+          <svg
+            class="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            ><path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 19l-7-7 7-7"></path></svg
+          >
           Retour à l'accueil
         </a>
-        <h1 class="text-4xl sm:text-5xl font-extrabold text-white leading-tight">
-          Logiciel de gestion de flotte pour <span class="text-accent">VTC et transport de personnes</span>
+        <h1
+          class="text-4xl sm:text-5xl font-extrabold text-white leading-tight"
+        >
+          Logiciel de gestion de flotte pour <span class="text-accent"
+            >VTC et transport de personnes</span
+          >
         </h1>
         <p class="mt-6 text-lg text-gray-300 leading-relaxed max-w-2xl">
-          Contrairement aux logiciels généralistes, Heroad est conçu spécifiquement pour les régulateurs VTC, les sociétés de transport et les chauffeurs indépendants.
+          Contrairement aux logiciels généralistes, Heroad est conçu
+          spécifiquement pour les régulateurs VTC, les sociétés de transport et
+          les chauffeurs indépendants.
         </p>
         <a
-          href="https://app.heroad.app"
+          href="https://pro.heroad.app"
           class="mt-8 inline-flex items-center px-8 py-4 rounded-xl bg-accent text-primary text-base font-bold hover:bg-accent-dark transition-colors"
         >
           Essai gratuit 14 jours
@@ -78,20 +128,26 @@ const comparison = [
   <!-- FEATURES -->
   <section class="py-20 sm:py-28">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-primary text-center mb-16">
+      <h2
+        class="text-3xl sm:text-4xl font-extrabold text-primary text-center mb-16"
+      >
         Fonctionnalités de gestion de flotte
       </h2>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {features.map((feature, i) => (
-          <div class="p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-shadow">
-            <div class="w-12 h-12 rounded-xl bg-accent/10 text-accent flex items-center justify-center mb-5">
-              <Fragment set:html={feature.icon} />
+        {
+          features.map((feature, i) => (
+            <div class="p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-shadow">
+              <div class="w-12 h-12 rounded-xl bg-accent/10 text-accent flex items-center justify-center mb-5">
+                <Fragment set:html={feature.icon} />
+              </div>
+              <h3 class="text-xl font-bold text-primary mb-3">{`${i + 1}. ${feature.title}`}</h3>
+              <p class="text-text-muted leading-relaxed">
+                {feature.description}
+              </p>
             </div>
-            <h3 class="text-xl font-bold text-primary mb-3">{`${i + 1}. ${feature.title}`}</h3>
-            <p class="text-text-muted leading-relaxed">{feature.description}</p>
-          </div>
-        ))}
+          ))
+        }
       </div>
     </div>
   </section>
@@ -99,7 +155,9 @@ const comparison = [
   <!-- COMPARISON TABLE -->
   <section class="py-20 sm:py-28 bg-surface">
     <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-primary text-center mb-4">
+      <h2
+        class="text-3xl sm:text-4xl font-extrabold text-primary text-center mb-4"
+      >
         Heroad vs autres logiciels de gestion de flotte
       </h2>
       <p class="text-center text-text-muted mb-12 max-w-2xl mx-auto">
@@ -110,44 +168,66 @@ const comparison = [
         <table class="w-full text-sm">
           <thead>
             <tr class="border-b border-gray-100">
-              <th class="text-left py-4 px-6 font-semibold text-text-muted">Fonctionnalité</th>
-              <th class="text-center py-4 px-6 font-bold text-primary bg-accent/5">Heroad</th>
-              <th class="text-center py-4 px-6 font-semibold text-text-muted">FleetNote</th>
-              <th class="text-center py-4 px-6 font-semibold text-text-muted">GAC Car Fleet</th>
+              <th class="text-left py-4 px-6 font-semibold text-text-muted"
+                >Fonctionnalité</th
+              >
+              <th
+                class="text-center py-4 px-6 font-bold text-primary bg-accent/5"
+                >Heroad</th
+              >
+              <th class="text-center py-4 px-6 font-semibold text-text-muted"
+                >FleetNote</th
+              >
+              <th class="text-center py-4 px-6 font-semibold text-text-muted"
+                >GAC Car Fleet</th
+              >
             </tr>
           </thead>
           <tbody>
-            {comparison.map(row => (
-              <tr class="border-b border-gray-50 last:border-0">
-                <td class="py-4 px-6 font-medium">{row.feature}</td>
-                <td class="py-4 px-6 text-center bg-accent/5">
-                  {typeof row.heroad === 'boolean'
-                    ? row.heroad
-                      ? <span class="text-success font-semibold">Oui</span>
-                      : <span class="text-error">Non</span>
-                    : <span class="font-semibold text-primary">{row.heroad}</span>
-                  }
-                </td>
-                <td class="py-4 px-6 text-center">
-                  {typeof row.fleetnote === 'boolean'
-                    ? row.fleetnote
-                      ? <span class="text-success">Oui</span>
-                      : <span class="text-gray-400">Non</span>
-                    : <span class="text-text-muted">{row.fleetnote}</span>
-                  }
-                </td>
-                <td class="py-4 px-6 text-center">
-                  {typeof row.gac === 'boolean'
-                    ? row.gac
-                      ? <span class="text-success">Oui</span>
-                      : <span class="text-gray-400">Non</span>
-                    : row.gac === 'partial'
-                      ? <span class="text-yellow-500">Limité</span>
-                      : <span class="text-text-muted">{row.gac}</span>
-                  }
-                </td>
-              </tr>
-            ))}
+            {
+              comparison.map((row) => (
+                <tr class="border-b border-gray-50 last:border-0">
+                  <td class="py-4 px-6 font-medium">{row.feature}</td>
+                  <td class="py-4 px-6 text-center bg-accent/5">
+                    {typeof row.heroad === "boolean" ? (
+                      row.heroad ? (
+                        <span class="text-success font-semibold">Oui</span>
+                      ) : (
+                        <span class="text-error">Non</span>
+                      )
+                    ) : (
+                      <span class="font-semibold text-primary">
+                        {row.heroad}
+                      </span>
+                    )}
+                  </td>
+                  <td class="py-4 px-6 text-center">
+                    {typeof row.fleetnote === "boolean" ? (
+                      row.fleetnote ? (
+                        <span class="text-success">Oui</span>
+                      ) : (
+                        <span class="text-gray-400">Non</span>
+                      )
+                    ) : (
+                      <span class="text-text-muted">{row.fleetnote}</span>
+                    )}
+                  </td>
+                  <td class="py-4 px-6 text-center">
+                    {typeof row.gac === "boolean" ? (
+                      row.gac ? (
+                        <span class="text-success">Oui</span>
+                      ) : (
+                        <span class="text-gray-400">Non</span>
+                      )
+                    ) : row.gac === "partial" ? (
+                      <span class="text-yellow-500">Limité</span>
+                    ) : (
+                      <span class="text-text-muted">{row.gac}</span>
+                    )}
+                  </td>
+                </tr>
+              ))
+            }
           </tbody>
         </table>
       </div>
@@ -157,15 +237,35 @@ const comparison = [
   <!-- INTERNAL LINKS -->
   <section class="py-20 sm:py-28">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <h2 class="text-2xl font-extrabold text-primary text-center mb-10">Découvrir aussi</h2>
+      <h2 class="text-2xl font-extrabold text-primary text-center mb-10">
+        Découvrir aussi
+      </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
-        <a href="/dispatch-missions" class="p-6 rounded-xl border border-gray-100 hover:border-accent/30 hover:shadow-md transition-all group">
-          <h3 class="font-bold text-primary group-hover:text-accent transition-colors">Dispatch simplifié</h3>
-          <p class="text-sm text-text-muted mt-1">Automatisez l'assignation de vos missions</p>
+        <a
+          href="/dispatch-missions"
+          class="p-6 rounded-xl border border-gray-100 hover:border-accent/30 hover:shadow-md transition-all group"
+        >
+          <h3
+            class="font-bold text-primary group-hover:text-accent transition-colors"
+          >
+            Dispatch simplifié
+          </h3>
+          <p class="text-sm text-text-muted mt-1">
+            Automatisez l'assignation de vos missions
+          </p>
         </a>
-        <a href="/app-chauffeur" class="p-6 rounded-xl border border-gray-100 hover:border-accent/30 hover:shadow-md transition-all group">
-          <h3 class="font-bold text-primary group-hover:text-accent transition-colors">App chauffeur</h3>
-          <p class="text-sm text-text-muted mt-1">L'application mobile pour vos chauffeurs</p>
+        <a
+          href="/app-chauffeur"
+          class="p-6 rounded-xl border border-gray-100 hover:border-accent/30 hover:shadow-md transition-all group"
+        >
+          <h3
+            class="font-bold text-primary group-hover:text-accent transition-colors"
+          >
+            App chauffeur
+          </h3>
+          <p class="text-sm text-text-muted mt-1">
+            L'application mobile pour vos chauffeurs
+          </p>
         </a>
       </div>
     </div>

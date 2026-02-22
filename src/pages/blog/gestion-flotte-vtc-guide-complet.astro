@@ -1,16 +1,17 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import CTA from '../../components/CTA.astro';
+import Layout from "../../layouts/Layout.astro";
+import CTA from "../../components/CTA.astro";
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Guide complet : Comment gérer une flotte VTC en 2026",
-  "description": "Comment gérer efficacement une flotte VTC ? Planification, dispatch, facturation, réglementation LOTI. Guide complet.",
-  "author": { "@type": "Organization", "name": "Heroad" },
-  "publisher": { "@type": "Organization", "name": "Heroad" },
-  "datePublished": "2026-02-20",
-  "dateModified": "2026-02-20"
+  headline: "Guide complet : Comment gérer une flotte VTC en 2026",
+  description:
+    "Comment gérer efficacement une flotte VTC ? Planification, dispatch, facturation, réglementation LOTI. Guide complet.",
+  author: { "@type": "Organization", name: "Heroad" },
+  publisher: { "@type": "Organization", name: "Heroad" },
+  datePublished: "2026-02-20",
+  dateModified: "2026-02-20",
 };
 ---
 
@@ -28,73 +29,184 @@ const jsonLd = {
         <span class="text-primary font-medium">Blog</span>
       </nav>
 
-      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary leading-tight">
+      <h1
+        class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary leading-tight"
+      >
         Guide complet : Comment gérer une flotte VTC en 2026
       </h1>
-      <p class="mt-4 text-lg text-text-muted">Publié le 20 février 2026 &middot; 8 min de lecture</p>
+      <p class="mt-4 text-lg text-text-muted">
+        Publié le 20 février 2026 &middot; 8 min de lecture
+      </p>
 
       <div class="mt-10 prose prose-lg max-w-none">
         <p class="text-lg text-text-muted leading-relaxed">
-          Gérer une flotte VTC n'est pas simple. Entre la planification des missions, la gestion des chauffeurs et la conformité LOTI, il y a beaucoup à faire. Ce guide vous montre comment optimiser votre gestion de flotte.
+          Gérer une flotte VTC n'est pas simple. Entre la planification des
+          missions, la gestion des chauffeurs et la conformité LOTI, il y a
+          beaucoup à faire. Ce guide vous montre comment optimiser votre gestion
+          de flotte.
         </p>
 
-        <h2 class="text-2xl font-extrabold text-primary mt-12 mb-4">1. Qu'est-ce qu'une flotte VTC ?</h2>
+        <h2 class="text-2xl font-extrabold text-primary mt-12 mb-4">
+          1. Qu'est-ce qu'une flotte VTC ?
+        </h2>
         <p class="text-text-muted leading-relaxed">
-          Une flotte VTC est un ensemble de véhicules de transport privé de personnes gérés par une même entité. Contrairement aux taxis, les VTC fonctionnent sur réservation préalable et offrent un service premium à leurs clients.
+          Une flotte VTC est un ensemble de véhicules de transport privé de
+          personnes gérés par une même entité. Contrairement aux taxis, les VTC
+          fonctionnent sur réservation préalable et offrent un service premium à
+          leurs clients.
         </p>
         <p class="text-text-muted leading-relaxed mt-4">
-          La gestion d'une flotte VTC implique la coordination de plusieurs éléments : les véhicules, les chauffeurs (salariés ou partenaires), les missions, et la relation client. Plus la flotte grandit, plus ces éléments deviennent complexes à gérer sans un outil adapté.
+          La gestion d'une flotte VTC implique la coordination de plusieurs
+          éléments : les véhicules, les chauffeurs (salariés ou partenaires),
+          les missions, et la relation client. Plus la flotte grandit, plus ces
+          éléments deviennent complexes à gérer sans un outil adapté.
         </p>
 
-        <h2 class="text-2xl font-extrabold text-primary mt-12 mb-4">2. Les défis de la gestion de flotte VTC</h2>
+        <h2 class="text-2xl font-extrabold text-primary mt-12 mb-4">
+          2. Les défis de la gestion de flotte VTC
+        </h2>
         <p class="text-text-muted leading-relaxed mb-4">
-          Voici les principaux défis auxquels font face les régulateurs et gestionnaires de flotte VTC :
+          Voici les principaux défis auxquels font face les régulateurs et
+          gestionnaires de flotte VTC :
         </p>
         <ul class="space-y-3">
           <li class="flex items-start gap-3">
-            <svg class="w-5 h-5 text-accent shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-            <span class="text-text-muted"><strong class="text-primary">Planifier les missions efficacement</strong> — Assigner la bonne mission au bon chauffeur, au bon moment</span>
+            <svg
+              class="w-5 h-5 text-accent shrink-0 mt-1"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"></path></svg
+            >
+            <span class="text-text-muted"
+              ><strong class="text-primary"
+                >Planifier les missions efficacement</strong
+              > — Assigner la bonne mission au bon chauffeur, au bon moment</span
+            >
           </li>
           <li class="flex items-start gap-3">
-            <svg class="w-5 h-5 text-accent shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-            <span class="text-text-muted"><strong class="text-primary">Assigner les missions aux bons chauffeurs</strong> — Prendre en compte la disponibilité, la localisation, les compétences</span>
+            <svg
+              class="w-5 h-5 text-accent shrink-0 mt-1"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"></path></svg
+            >
+            <span class="text-text-muted"
+              ><strong class="text-primary"
+                >Assigner les missions aux bons chauffeurs</strong
+              > — Prendre en compte la disponibilité, la localisation, les compétences</span
+            >
           </li>
           <li class="flex items-start gap-3">
-            <svg class="w-5 h-5 text-accent shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-            <span class="text-text-muted"><strong class="text-primary">Respecter la réglementation LOTI</strong> — Conformité obligatoire pour le transport de plus de 9 personnes</span>
+            <svg
+              class="w-5 h-5 text-accent shrink-0 mt-1"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"></path></svg
+            >
+            <span class="text-text-muted"
+              ><strong class="text-primary"
+                >Respecter la réglementation LOTI</strong
+              > — Conformité obligatoire pour le transport de plus de 9 personnes</span
+            >
           </li>
           <li class="flex items-start gap-3">
-            <svg class="w-5 h-5 text-accent shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-            <span class="text-text-muted"><strong class="text-primary">Facturer correctement</strong> — Suivi précis des missions pour une facturation juste</span>
+            <svg
+              class="w-5 h-5 text-accent shrink-0 mt-1"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"></path></svg
+            >
+            <span class="text-text-muted"
+              ><strong class="text-primary">Facturer correctement</strong> — Suivi
+              précis des missions pour une facturation juste</span
+            >
           </li>
           <li class="flex items-start gap-3">
-            <svg class="w-5 h-5 text-accent shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-            <span class="text-text-muted"><strong class="text-primary">Suivre les véhicules en temps réel</strong> — Savoir où sont vos véhicules à tout moment</span>
+            <svg
+              class="w-5 h-5 text-accent shrink-0 mt-1"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"></path></svg
+            >
+            <span class="text-text-muted"
+              ><strong class="text-primary"
+                >Suivre les véhicules en temps réel</strong
+              > — Savoir où sont vos véhicules à tout moment</span
+            >
           </li>
         </ul>
 
-        <h2 class="text-2xl font-extrabold text-primary mt-12 mb-4">3. Les meilleures pratiques</h2>
+        <h2 class="text-2xl font-extrabold text-primary mt-12 mb-4">
+          3. Les meilleures pratiques
+        </h2>
         <p class="text-text-muted leading-relaxed">
-          Utilisez un <a href="/gestion-flotte" class="text-accent hover:text-accent-dark font-medium">logiciel dédié VTC</a> plutôt qu'un logiciel généraliste. Les outils généralistes ne comprennent pas les spécificités du transport de personnes : dispatch en temps réel, synchronisation calendrier, gestion des partenaires.
+          Utilisez un <a
+            href="/gestion-flotte"
+            class="text-accent hover:text-accent-dark font-medium"
+            >logiciel dédié VTC</a
+          > plutôt qu'un logiciel généraliste. Les outils généralistes ne comprennent
+          pas les spécificités du transport de personnes : dispatch en temps réel,
+          synchronisation calendrier, gestion des partenaires.
         </p>
         <p class="text-text-muted leading-relaxed mt-4">
-          Simplifiez votre dispatch. Le <a href="/dispatch-missions" class="text-accent hover:text-accent-dark font-medium">dispatch simplifié</a> de Heroad permet de gagner des heures chaque semaine en éliminant les appels téléphoniques et les échanges de SMS pour assigner les missions.
+          Simplifiez votre dispatch. Le <a
+            href="/dispatch-missions"
+            class="text-accent hover:text-accent-dark font-medium"
+            >dispatch simplifié</a
+          > de Heroad permet de gagner des heures chaque semaine en éliminant les
+          appels téléphoniques et les échanges de SMS pour assigner les missions.
         </p>
         <p class="text-text-muted leading-relaxed mt-4">
-          Équipez vos chauffeurs d'une <a href="/app-chauffeur" class="text-accent hover:text-accent-dark font-medium">application mobile dédiée</a>. Ils reçoivent les missions directement, mettent à jour le statut en un clic, et synchronisent automatiquement avec leur calendrier.
+          Équipez vos chauffeurs d'une <a
+            href="/app-chauffeur"
+            class="text-accent hover:text-accent-dark font-medium"
+            >application mobile dédiée</a
+          >. Ils reçoivent les missions directement, mettent à jour le statut en
+          un clic, et synchronisent automatiquement avec leur calendrier.
         </p>
 
-        <h2 class="text-2xl font-extrabold text-primary mt-12 mb-4">4. Outils recommandés</h2>
+        <h2 class="text-2xl font-extrabold text-primary mt-12 mb-4">
+          4. Outils recommandés
+        </h2>
         <p class="text-text-muted leading-relaxed mb-4">
           Pour gérer efficacement votre flotte, vous avez besoin de :
         </p>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose">
           <div class="p-5 rounded-xl bg-surface border border-gray-100">
             <h3 class="font-bold text-primary mb-1">Un logiciel de dispatch</h3>
-            <p class="text-sm text-text-muted">Pour assigner les missions en quelques clics</p>
+            <p class="text-sm text-text-muted">
+              Pour assigner les missions en quelques clics
+            </p>
           </div>
           <div class="p-5 rounded-xl bg-surface border border-gray-100">
-            <h3 class="font-bold text-primary mb-1">Synchronisation calendrier</h3>
+            <h3 class="font-bold text-primary mb-1">
+              Synchronisation calendrier
+            </h3>
             <p class="text-sm text-text-muted">Pour éviter la double saisie</p>
           </div>
           <div class="p-5 rounded-xl bg-surface border border-gray-100">
@@ -103,20 +215,29 @@ const jsonLd = {
           </div>
           <div class="p-5 rounded-xl bg-surface border border-gray-100">
             <h3 class="font-bold text-primary mb-1">Gestion des partenaires</h3>
-            <p class="text-sm text-text-muted">Pour déléguer sans perdre le contrôle</p>
+            <p class="text-sm text-text-muted">
+              Pour déléguer sans perdre le contrôle
+            </p>
           </div>
         </div>
         <p class="text-text-muted leading-relaxed mt-6">
-          <a href="/" class="text-accent hover:text-accent-dark font-semibold">Heroad</a> combine tous ces éléments dans une seule plateforme, conçu spécifiquement pour les VTC et le transport de personnes.
+          <a href="/" class="text-accent hover:text-accent-dark font-semibold"
+            >Heroad</a
+          > combine tous ces éléments dans une seule plateforme, conçu spécifiquement
+          pour les VTC et le transport de personnes.
         </p>
       </div>
 
       <!-- CTA inline -->
       <div class="mt-12 p-8 rounded-2xl bg-primary text-center">
-        <h3 class="text-2xl font-extrabold text-white mb-3">Prêt à optimiser votre gestion de flotte ?</h3>
-        <p class="text-gray-300 mb-6">Essayez Heroad gratuitement pendant 14 jours.</p>
+        <h3 class="text-2xl font-extrabold text-white mb-3">
+          Prêt à optimiser votre gestion de flotte ?
+        </h3>
+        <p class="text-gray-300 mb-6">
+          Essayez Heroad gratuitement pendant 14 jours.
+        </p>
         <a
-          href="https://app.heroad.app"
+          href="https://pro.heroad.app"
           class="inline-flex items-center px-8 py-3.5 rounded-xl bg-accent text-primary text-base font-bold hover:bg-accent-dark transition-colors"
         >
           Essayer Heroad gratuitement

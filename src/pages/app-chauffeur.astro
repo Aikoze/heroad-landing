@@ -1,38 +1,43 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import CTA from '../components/CTA.astro';
+import Layout from "../layouts/Layout.astro";
+import CTA from "../components/CTA.astro";
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "MobileApplication",
-  "name": "Heroad - App chauffeur VTC",
-  "description": "Application mobile pour chauffeurs VTC : missions, calendrier, suivi temps réel",
-  "applicationCategory": "BusinessApplication",
-  "operatingSystem": "iOS, Android, Web",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+  name: "Heroad - App chauffeur VTC",
+  description:
+    "Application mobile pour chauffeurs VTC : missions, calendrier, suivi temps réel",
+  applicationCategory: "BusinessApplication",
+  operatingSystem: "iOS, Android, Web",
+  offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" },
 };
 
 const features = [
   {
-    title: 'Recevez les missions directement',
-    description: 'Pas d\'appels téléphoniques. Les missions arrivent dans l\'app avec tous les détails : lieu de départ, destination, horaire, nombre de passagers.',
-    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>`
+    title: "Recevez les missions directement",
+    description:
+      "Pas d'appels téléphoniques. Les missions arrivent dans l'app avec tous les détails : lieu de départ, destination, horaire, nombre de passagers.",
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>`,
   },
   {
-    title: 'Synchronisation calendrier',
-    description: 'Chaque mission s\'ajoute automatiquement à votre calendrier Apple ou Google. Vous voyez votre planning sans ouvrir l\'app.',
-    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>`
+    title: "Synchronisation calendrier",
+    description:
+      "Chaque mission s'ajoute automatiquement à votre calendrier Apple ou Google. Vous voyez votre planning sans ouvrir l'app.",
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>`,
   },
   {
-    title: 'Suivi en temps réel',
-    description: 'Mettez à jour le statut de vos missions en un clic : en route, arrivé, mission complétée. Votre régulateur voit tout en temps réel.',
-    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`
+    title: "Suivi en temps réel",
+    description:
+      "Mettez à jour le statut de vos missions en un clic : en route, arrivé, mission complétée. Votre régulateur voit tout en temps réel.",
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
   },
   {
-    title: 'Gratuit pour les chauffeurs indépendants',
-    description: 'Aucun frais si vous gérez un seul véhicule. Payez seulement si vous embauchez. Pas de commission sur vos missions.',
-    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`
-  }
+    title: "Gratuit pour les chauffeurs indépendants",
+    description:
+      "Aucun frais si vous gérez un seul véhicule. Payez seulement si vous embauchez. Pas de commission sur vos missions.",
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`,
+  },
 ];
 ---
 
@@ -42,31 +47,65 @@ const features = [
   jsonLd={jsonLd}
 >
   <!-- HERO -->
-  <section class="relative overflow-hidden bg-gradient-to-b from-primary to-primary-light py-20 sm:py-24">
+  <section
+    class="relative overflow-hidden bg-gradient-to-b from-primary to-primary-light py-20 sm:py-24"
+  >
     <div class="absolute inset-0 opacity-5">
-      <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 40px 40px;"></div>
+      <div
+        class="absolute inset-0"
+        style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 40px 40px;"
+      >
+      </div>
     </div>
     <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
       <div class="max-w-3xl">
-        <a href="/" class="inline-flex items-center gap-2 text-sm text-accent hover:text-accent-dark transition-colors mb-6">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        <a
+          href="/"
+          class="inline-flex items-center gap-2 text-sm text-accent hover:text-accent-dark transition-colors mb-6"
+        >
+          <svg
+            class="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            ><path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 19l-7-7 7-7"></path></svg
+          >
           Retour à l'accueil
         </a>
-        <h1 class="text-4xl sm:text-5xl font-extrabold text-white leading-tight">
+        <h1
+          class="text-4xl sm:text-5xl font-extrabold text-white leading-tight"
+        >
           Application chauffeur <span class="text-accent">VTC</span>
         </h1>
         <p class="mt-6 text-lg text-gray-300 leading-relaxed max-w-2xl">
-          L'app Heroad permet aux chauffeurs de recevoir et gérer leurs missions en dehors des plateformes classiques. Disponible sur iOS, Android et Web.
+          L'app Heroad permet aux chauffeurs de recevoir et gérer leurs missions
+          en dehors des plateformes classiques. Disponible sur iOS, Android et
+          Web.
         </p>
         <div class="mt-8 flex flex-col sm:flex-row items-start gap-4">
           <a
-            href="https://app.heroad.app"
+            href="https://pro.heroad.app"
             class="inline-flex items-center px-8 py-4 rounded-xl bg-accent text-primary text-base font-bold hover:bg-accent-dark transition-colors"
           >
             Télécharger gratuitement
           </a>
           <div class="flex items-center gap-2 text-gray-400 text-sm pt-3">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              ></path></svg
+            >
             100% gratuit pour les chauffeurs indépendants
           </div>
         </div>
@@ -77,25 +116,37 @@ const features = [
   <!-- FEATURES -->
   <section class="py-20 sm:py-28">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-primary text-center mb-16">
+      <h2
+        class="text-3xl sm:text-4xl font-extrabold text-primary text-center mb-16"
+      >
         Fonctionnalités de l'app chauffeur
       </h2>
 
       <div class="space-y-16">
-        {features.map((feature, i) => (
-          <div class={`flex flex-col ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-10`}>
-            <div class="flex-1">
-              <div class="w-12 h-12 rounded-xl bg-accent/10 text-accent flex items-center justify-center mb-5">
-                <Fragment set:html={feature.icon} />
+        {
+          features.map((feature, i) => (
+            <div
+              class={`flex flex-col ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} items-center gap-10`}
+            >
+              <div class="flex-1">
+                <div class="w-12 h-12 rounded-xl bg-accent/10 text-accent flex items-center justify-center mb-5">
+                  <Fragment set:html={feature.icon} />
+                </div>
+                <h3 class="text-2xl font-bold text-primary mb-3">
+                  {feature.title}
+                </h3>
+                <p class="text-lg text-text-muted leading-relaxed">
+                  {feature.description}
+                </p>
               </div>
-              <h3 class="text-2xl font-bold text-primary mb-3">{feature.title}</h3>
-              <p class="text-lg text-text-muted leading-relaxed">{feature.description}</p>
+              <div class="flex-1 w-full h-48 rounded-2xl bg-surface border border-gray-100 flex items-center justify-center">
+                <span class="text-text-muted text-sm">
+                  Capture d'écran à venir
+                </span>
+              </div>
             </div>
-            <div class="flex-1 w-full h-48 rounded-2xl bg-surface border border-gray-100 flex items-center justify-center">
-              <span class="text-text-muted text-sm">Capture d'écran à venir</span>
-            </div>
-          </div>
-        ))}
+          ))
+        }
       </div>
     </div>
   </section>
@@ -112,35 +163,99 @@ const features = [
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div class="p-8 rounded-2xl bg-white border border-gray-100 text-left">
-          <h3 class="text-xl font-bold text-primary mb-3">Chauffeur indépendant</h3>
+          <h3 class="text-xl font-bold text-primary mb-3">
+            Chauffeur indépendant
+          </h3>
           <ul class="space-y-3">
             <li class="flex items-start gap-3 text-text-muted">
-              <svg class="w-5 h-5 text-success shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <svg
+                class="w-5 h-5 text-success shrink-0 mt-0.5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                ><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"></path></svg
+              >
               Organisez vos missions gratuitement
             </li>
             <li class="flex items-start gap-3 text-text-muted">
-              <svg class="w-5 h-5 text-success shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <svg
+                class="w-5 h-5 text-success shrink-0 mt-0.5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                ><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"></path></svg
+              >
               Synchro calendrier automatique
             </li>
             <li class="flex items-start gap-3 text-text-muted">
-              <svg class="w-5 h-5 text-success shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <svg
+                class="w-5 h-5 text-success shrink-0 mt-0.5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                ><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"></path></svg
+              >
               Aucun frais, aucune commission
             </li>
           </ul>
         </div>
         <div class="p-8 rounded-2xl bg-white border border-gray-100 text-left">
-          <h3 class="text-xl font-bold text-primary mb-3">Chauffeur partenaire</h3>
+          <h3 class="text-xl font-bold text-primary mb-3">
+            Chauffeur partenaire
+          </h3>
           <ul class="space-y-3">
             <li class="flex items-start gap-3 text-text-muted">
-              <svg class="w-5 h-5 text-success shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <svg
+                class="w-5 h-5 text-success shrink-0 mt-0.5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                ><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"></path></svg
+              >
               Recevez les missions de votre régulateur
             </li>
             <li class="flex items-start gap-3 text-text-muted">
-              <svg class="w-5 h-5 text-success shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <svg
+                class="w-5 h-5 text-success shrink-0 mt-0.5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                ><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"></path></svg
+              >
               Notifications en temps réel
             </li>
             <li class="flex items-start gap-3 text-text-muted">
-              <svg class="w-5 h-5 text-success shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <svg
+                class="w-5 h-5 text-success shrink-0 mt-0.5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                ><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"></path></svg
+              >
               Accès dédié et sécurisé
             </li>
           </ul>
@@ -152,19 +267,42 @@ const features = [
   <!-- INTERNAL LINKS -->
   <section class="py-20 sm:py-28">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <h2 class="text-2xl font-extrabold text-primary text-center mb-10">Découvrir aussi</h2>
+      <h2 class="text-2xl font-extrabold text-primary text-center mb-10">
+        Découvrir aussi
+      </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
-        <a href="/gestion-flotte" class="p-6 rounded-xl border border-gray-100 hover:border-accent/30 hover:shadow-md transition-all group">
-          <h3 class="font-bold text-primary group-hover:text-accent transition-colors">Gestion de flotte</h3>
-          <p class="text-sm text-text-muted mt-1">Gérez tous vos véhicules en un seul endroit</p>
+        <a
+          href="/gestion-flotte"
+          class="p-6 rounded-xl border border-gray-100 hover:border-accent/30 hover:shadow-md transition-all group"
+        >
+          <h3
+            class="font-bold text-primary group-hover:text-accent transition-colors"
+          >
+            Gestion de flotte
+          </h3>
+          <p class="text-sm text-text-muted mt-1">
+            Gérez tous vos véhicules en un seul endroit
+          </p>
         </a>
-        <a href="/dispatch-missions" class="p-6 rounded-xl border border-gray-100 hover:border-accent/30 hover:shadow-md transition-all group">
-          <h3 class="font-bold text-primary group-hover:text-accent transition-colors">Dispatch simplifié</h3>
-          <p class="text-sm text-text-muted mt-1">Automatisez l'assignation de vos missions</p>
+        <a
+          href="/dispatch-missions"
+          class="p-6 rounded-xl border border-gray-100 hover:border-accent/30 hover:shadow-md transition-all group"
+        >
+          <h3
+            class="font-bold text-primary group-hover:text-accent transition-colors"
+          >
+            Dispatch simplifié
+          </h3>
+          <p class="text-sm text-text-muted mt-1">
+            Automatisez l'assignation de vos missions
+          </p>
         </a>
       </div>
     </div>
   </section>
 
-  <CTA title="Téléchargez l'app gratuitement" subtitle="Disponible sur iOS, Android et Web. Gratuit pour les chauffeurs avec 1 véhicule." />
+  <CTA
+    title="Téléchargez l'app gratuitement"
+    subtitle="Disponible sur iOS, Android et Web. Gratuit pour les chauffeurs avec 1 véhicule."
+  />
 </Layout>

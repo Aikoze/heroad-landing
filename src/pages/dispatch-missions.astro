@@ -1,45 +1,49 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import CTA from '../components/CTA.astro';
+import Layout from "../layouts/Layout.astro";
+import CTA from "../components/CTA.astro";
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Product",
-  "name": "Heroad - Dispatch VTC",
-  "description": "Logiciel de dispatch pour VTC et transport de personnes",
-  "brand": { "@type": "Brand", "name": "Heroad" },
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+  name: "Heroad - Dispatch VTC",
+  description: "Logiciel de dispatch pour VTC et transport de personnes",
+  brand: { "@type": "Brand", name: "Heroad" },
+  offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" },
 };
 
 const steps = [
   {
-    step: '1',
-    title: 'Créez une mission',
-    description: 'Saisissez les détails : lieu de départ, destination, horaire, nombre de passagers.'
+    step: "1",
+    title: "Créez une mission",
+    description:
+      "Saisissez les détails : lieu de départ, destination, horaire, nombre de passagers.",
   },
   {
-    step: '2',
-    title: 'Dispatch simplifié',
-    description: 'Envoyez la mission au chauffeur de votre choix en quelques clics.'
+    step: "2",
+    title: "Dispatch simplifié",
+    description:
+      "Envoyez la mission au chauffeur de votre choix en quelques clics.",
   },
   {
-    step: '3',
-    title: 'Notification en temps réel',
-    description: 'Le chauffeur reçoit une notification. Il accepte ou refuse en un clic.'
+    step: "3",
+    title: "Notification en temps réel",
+    description:
+      "Le chauffeur reçoit une notification. Il accepte ou refuse en un clic.",
   },
   {
-    step: '4',
-    title: 'Suivi de la mission',
-    description: 'Vous voyez le statut en temps réel : en route, arrivé, mission complétée.'
-  }
+    step: "4",
+    title: "Suivi de la mission",
+    description:
+      "Vous voyez le statut en temps réel : en route, arrivé, mission complétée.",
+  },
 ];
 
 const advantages = [
-  'Gagnez du temps grâce à un dispatch simplifié',
-  'Vos chauffeurs reçoivent les missions sur leur téléphone',
-  'Optimisation des trajets = moins de temps d\'attente',
-  'Pas de commission sur les missions (contrairement aux plateformes)',
-  'Synchronisation calendrier iOS et Android intégrée',
+  "Gagnez du temps grâce à un dispatch simplifié",
+  "Vos chauffeurs reçoivent les missions sur leur téléphone",
+  "Optimisation des trajets = moins de temps d'attente",
+  "Pas de commission sur les missions (contrairement aux plateformes)",
+  "Synchronisation calendrier iOS et Android intégrée",
 ];
 ---
 
@@ -49,24 +53,49 @@ const advantages = [
   jsonLd={jsonLd}
 >
   <!-- HERO -->
-  <section class="relative overflow-hidden bg-gradient-to-b from-primary to-primary-light py-20 sm:py-24">
+  <section
+    class="relative overflow-hidden bg-gradient-to-b from-primary to-primary-light py-20 sm:py-24"
+  >
     <div class="absolute inset-0 opacity-5">
-      <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 40px 40px;"></div>
+      <div
+        class="absolute inset-0"
+        style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 40px 40px;"
+      >
+      </div>
     </div>
     <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
       <div class="max-w-3xl">
-        <a href="/" class="inline-flex items-center gap-2 text-sm text-accent hover:text-accent-dark transition-colors mb-6">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        <a
+          href="/"
+          class="inline-flex items-center gap-2 text-sm text-accent hover:text-accent-dark transition-colors mb-6"
+        >
+          <svg
+            class="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            ><path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 19l-7-7 7-7"></path></svg
+          >
           Retour à l'accueil
         </a>
-        <h1 class="text-4xl sm:text-5xl font-extrabold text-white leading-tight">
-          Logiciel de dispatch pour <span class="text-accent">VTC et transport de personnes</span>
+        <h1
+          class="text-4xl sm:text-5xl font-extrabold text-white leading-tight"
+        >
+          Logiciel de dispatch pour <span class="text-accent"
+            >VTC et transport de personnes</span
+          >
         </h1>
         <p class="mt-6 text-lg text-gray-300 leading-relaxed max-w-2xl">
-          Heroad simplifie l'assignation de vos missions. Vos chauffeurs reçoivent les missions directement dans l'app, sans appels téléphoniques.
+          Heroad simplifie l'assignation de vos missions. Vos chauffeurs
+          reçoivent les missions directement dans l'app, sans appels
+          téléphoniques.
         </p>
         <a
-          href="https://app.heroad.app"
+          href="https://pro.heroad.app"
           class="mt-8 inline-flex items-center px-8 py-4 rounded-xl bg-accent text-primary text-base font-bold hover:bg-accent-dark transition-colors"
         >
           Essayer le dispatch gratuitement
@@ -78,20 +107,26 @@ const advantages = [
   <!-- HOW IT WORKS -->
   <section class="py-20 sm:py-28">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-primary text-center mb-16">
+      <h2
+        class="text-3xl sm:text-4xl font-extrabold text-primary text-center mb-16"
+      >
         Comment fonctionne le dispatch Heroad
       </h2>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        {steps.map(s => (
-          <div class="relative">
-            <div class="w-12 h-12 rounded-2xl bg-primary text-white flex items-center justify-center text-lg font-bold mb-5">
-              {s.step}
+        {
+          steps.map((s) => (
+            <div class="relative">
+              <div class="w-12 h-12 rounded-2xl bg-primary text-white flex items-center justify-center text-lg font-bold mb-5">
+                {s.step}
+              </div>
+              <h3 class="text-lg font-bold text-primary mb-2">{s.title}</h3>
+              <p class="text-text-muted text-sm leading-relaxed">
+                {s.description}
+              </p>
             </div>
-            <h3 class="text-lg font-bold text-primary mb-2">{s.title}</h3>
-            <p class="text-text-muted text-sm leading-relaxed">{s.description}</p>
-          </div>
-        ))}
+          ))
+        }
       </div>
     </div>
   </section>
@@ -99,24 +134,39 @@ const advantages = [
   <!-- ADVANTAGES -->
   <section class="py-20 sm:py-28 bg-surface">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-primary text-center mb-4">
+      <h2
+        class="text-3xl sm:text-4xl font-extrabold text-primary text-center mb-4"
+      >
         Avantages du dispatch Heroad pour votre activité VTC
       </h2>
       <p class="text-center text-text-muted mb-12 max-w-2xl mx-auto">
-        Automatisez votre dispatch et concentrez-vous sur ce qui compte : vos clients.
+        Automatisez votre dispatch et concentrez-vous sur ce qui compte : vos
+        clients.
       </p>
 
       <div class="max-w-2xl mx-auto space-y-4">
-        {advantages.map(adv => (
-          <div class="flex items-start gap-4 p-5 bg-white rounded-xl border border-gray-100">
-            <div class="w-10 h-10 rounded-lg bg-accent/10 text-accent flex items-center justify-center shrink-0 text-lg">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-              </svg>
+        {
+          advantages.map((adv) => (
+            <div class="flex items-start gap-4 p-5 bg-white rounded-xl border border-gray-100">
+              <div class="w-10 h-10 rounded-lg bg-accent/10 text-accent flex items-center justify-center shrink-0 text-lg">
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+              </div>
+              <p class="text-base font-medium text-primary pt-2">{adv}</p>
             </div>
-            <p class="text-base font-medium text-primary pt-2">{adv}</p>
-          </div>
-        ))}
+          ))
+        }
       </div>
     </div>
   </section>
@@ -124,15 +174,35 @@ const advantages = [
   <!-- INTERNAL LINKS -->
   <section class="py-20 sm:py-28">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <h2 class="text-2xl font-extrabold text-primary text-center mb-10">Découvrir aussi</h2>
+      <h2 class="text-2xl font-extrabold text-primary text-center mb-10">
+        Découvrir aussi
+      </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
-        <a href="/gestion-flotte" class="p-6 rounded-xl border border-gray-100 hover:border-accent/30 hover:shadow-md transition-all group">
-          <h3 class="font-bold text-primary group-hover:text-accent transition-colors">Gestion de flotte</h3>
-          <p class="text-sm text-text-muted mt-1">Gérez tous vos véhicules en un seul endroit</p>
+        <a
+          href="/gestion-flotte"
+          class="p-6 rounded-xl border border-gray-100 hover:border-accent/30 hover:shadow-md transition-all group"
+        >
+          <h3
+            class="font-bold text-primary group-hover:text-accent transition-colors"
+          >
+            Gestion de flotte
+          </h3>
+          <p class="text-sm text-text-muted mt-1">
+            Gérez tous vos véhicules en un seul endroit
+          </p>
         </a>
-        <a href="/app-chauffeur" class="p-6 rounded-xl border border-gray-100 hover:border-accent/30 hover:shadow-md transition-all group">
-          <h3 class="font-bold text-primary group-hover:text-accent transition-colors">App chauffeur</h3>
-          <p class="text-sm text-text-muted mt-1">L'application mobile pour vos chauffeurs</p>
+        <a
+          href="/app-chauffeur"
+          class="p-6 rounded-xl border border-gray-100 hover:border-accent/30 hover:shadow-md transition-all group"
+        >
+          <h3
+            class="font-bold text-primary group-hover:text-accent transition-colors"
+          >
+            App chauffeur
+          </h3>
+          <p class="text-sm text-text-muted mt-1">
+            L'application mobile pour vos chauffeurs
+          </p>
         </a>
       </div>
     </div>

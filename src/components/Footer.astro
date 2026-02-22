@@ -1,13 +1,16 @@
 ---
 const productLinks = [
-  { label: 'Gestion de flotte', href: '/gestion-flotte' },
-  { label: 'Dispatch & Planification', href: '/dispatch-missions' },
-  { label: 'App chauffeur', href: '/app-chauffeur' },
+  { label: "Gestion de flotte", href: "/gestion-flotte" },
+  { label: "Dispatch & Planification", href: "/dispatch-missions" },
+  { label: "App chauffeur", href: "/app-chauffeur" },
 ];
 
 const resourceLinks = [
-  { label: 'Guide gestion de flotte VTC', href: '/blog/gestion-flotte-vtc-guide-complet' },
-  { label: 'Way-Plan vs Heroad', href: '/blog/way-plan-vs-heroad' },
+  {
+    label: "Guide gestion de flotte VTC",
+    href: "/blog/gestion-flotte-vtc-guide-complet",
+  },
+  { label: "Way-Plan vs Heroad", href: "/blog/way-plan-vs-heroad" },
 ];
 ---
 
@@ -16,49 +19,83 @@ const resourceLinks = [
     <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
       <!-- Brand -->
       <div class="md:col-span-1">
-        <a href="/" class="flex items-center gap-2 font-extrabold text-xl text-white">
-          <img src="/logo.svg" alt="Heroad" width="32" height="32" class="shrink-0 invert" />
+        <a
+          href="/"
+          class="flex items-center gap-2 font-extrabold text-xl text-white"
+        >
+          <img
+            src="/logo-circle.svg"
+            alt="Heroad"
+            width="32"
+            height="32"
+            class="shrink-0"
+          />
           Heroad
         </a>
         <p class="mt-4 text-sm text-gray-400 leading-relaxed">
-          Logiciel de gestion de flotte pour VTC et transport de personnes. Gratuit pour les chauffeurs indépendants.
+          Logiciel de gestion de flotte pour VTC et transport de personnes.
+          Gratuit pour les chauffeurs indépendants.
         </p>
       </div>
 
       <!-- Produit -->
       <div>
-        <h3 class="font-semibold text-sm uppercase tracking-wider text-gray-400 mb-4">Produit</h3>
+        <h3
+          class="font-semibold text-sm uppercase tracking-wider text-gray-400 mb-4"
+        >
+          Produit
+        </h3>
         <ul class="space-y-3">
-          {productLinks.map(link => (
-            <li>
-              <a href={link.href} class="text-sm text-gray-300 hover:text-white transition-colors">
-                {link.label}
-              </a>
-            </li>
-          ))}
+          {
+            productLinks.map((link) => (
+              <li>
+                <a
+                  href={link.href}
+                  class="text-sm text-gray-300 hover:text-white transition-colors"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))
+          }
         </ul>
       </div>
 
       <!-- Ressources -->
       <div>
-        <h3 class="font-semibold text-sm uppercase tracking-wider text-gray-400 mb-4">Ressources</h3>
+        <h3
+          class="font-semibold text-sm uppercase tracking-wider text-gray-400 mb-4"
+        >
+          Ressources
+        </h3>
         <ul class="space-y-3">
-          {resourceLinks.map(link => (
-            <li>
-              <a href={link.href} class="text-sm text-gray-300 hover:text-white transition-colors">
-                {link.label}
-              </a>
-            </li>
-          ))}
+          {
+            resourceLinks.map((link) => (
+              <li>
+                <a
+                  href={link.href}
+                  class="text-sm text-gray-300 hover:text-white transition-colors"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))
+          }
         </ul>
       </div>
 
       <!-- CTA -->
       <div>
-        <h3 class="font-semibold text-sm uppercase tracking-wider text-gray-400 mb-4">Commencer</h3>
-        <p class="text-sm text-gray-300 mb-4">Gratuit pour les chauffeurs avec 1 véhicule.</p>
+        <h3
+          class="font-semibold text-sm uppercase tracking-wider text-gray-400 mb-4"
+        >
+          Commencer
+        </h3>
+        <p class="text-sm text-gray-300 mb-4">
+          Gratuit pour les chauffeurs avec 1 véhicule.
+        </p>
         <a
-          href="https://app.heroad.app"
+          href="https://pro.heroad.app"
           class="inline-flex items-center px-5 py-2.5 rounded-lg bg-accent text-primary text-sm font-semibold hover:bg-accent-dark transition-colors"
         >
           Essai gratuit 14 jours
@@ -66,12 +103,23 @@ const resourceLinks = [
       </div>
     </div>
 
-    <div class="mt-12 pt-8 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <p class="text-sm text-gray-500">&copy; {new Date().getFullYear()} Heroad. Tous droits réservés.</p>
+    <div
+      class="mt-12 pt-8 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4"
+    >
+      <p class="text-sm text-gray-500">
+        &copy; {new Date().getFullYear()} Heroad. Tous droits réservés.
+      </p>
       <div class="flex gap-6 text-sm text-gray-500">
-        <a href="/plan-du-site" class="hover:text-gray-300 transition-colors">Plan du site</a>
-        <a href="/mentions-legales" class="hover:text-gray-300 transition-colors">Mentions légales</a>
-        <a href="/confidentialite" class="hover:text-gray-300 transition-colors">Confidentialité</a>
+        <a href="/plan-du-site" class="hover:text-gray-300 transition-colors"
+          >Plan du site</a
+        >
+        <a
+          href="/mentions-legales"
+          class="hover:text-gray-300 transition-colors">Mentions légales</a
+        >
+        <a href="/confidentialite" class="hover:text-gray-300 transition-colors"
+          >Confidentialité</a
+        >
       </div>
     </div>
   </div>
