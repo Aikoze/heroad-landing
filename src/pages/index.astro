@@ -12,9 +12,9 @@ const jsonLd = {
   operatingSystem: "Web, iOS, Android",
   offers: {
     "@type": "Offer",
-    price: "0",
+    price: "10",
     priceCurrency: "EUR",
-    description: "Gratuit pour les chauffeurs avec 1 véhicule",
+    description: "10€/mois pour les chauffeurs avec 1 véhicule",
   },
 };
 
@@ -42,16 +42,16 @@ const features = [
   },
   {
     icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`,
-    title: "Gratuit pour les chauffeurs indépendants",
+    title: "10€/mois pour les chauffeurs indépendants",
     description:
-      "Les chauffeurs indépendants peuvent organiser leurs missions sans frais. Payez seulement si vous gérez plusieurs véhicules.",
+      "Gestion du planning, partage de missions et génération des bons de mission inclus. Pas de commission sur vos missions.",
     link: "/app-chauffeur",
   },
 ];
 
 const advantages = [
   "Spécialisé VTC & Transport de personnes (pas généraliste)",
-  "Gratuit pour les chauffeurs indépendants",
+  "Seulement 10€/mois pour les chauffeurs indépendants",
   "Dispatch simplifié + synchronisation calendrier",
   "Pas de commission sur les missions (contrairement aux plateformes)",
 ];
@@ -59,7 +59,7 @@ const advantages = [
 
 <Layout
   title="Heroad - Logiciel de gestion de flotte VTC & Transport de personnes"
-  description="Heroad : planifiez vos missions, gérez votre flotte VTC/LOTI et synchronisez avec iOS, Android et le Web. Gratuit pour les chauffeurs indépendants. Essai gratuit pour les régulateurs."
+  description="Heroad : planifiez vos missions, gérez votre flotte VTC/LOTI et synchronisez avec iOS, Android et le Web. Dès 10€/mois pour les chauffeurs indépendants. Essai gratuit 14 jours."
   jsonLd={jsonLd}
 >
   <!-- HERO -->
@@ -95,8 +95,8 @@ const advantages = [
           class="mt-6 text-lg sm:text-xl text-gray-300 leading-relaxed max-w-2xl"
         >
           Planifiez vos missions, gérez vos chauffeurs et synchronisez avec
-          votre calendrier. Gratuit pour les chauffeurs indépendants. Essai
-          gratuit pour les régulateurs.
+          votre calendrier. Dès 10€/mois pour les chauffeurs indépendants.
+          Essai gratuit 14 jours.
         </p>
 
         <div class="mt-8 flex flex-col sm:flex-row items-start gap-4">
@@ -121,7 +121,7 @@ const advantages = [
             href="/app-chauffeur"
             class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl border-2 border-gray-500 text-white text-base font-semibold hover:border-gray-300 transition-colors"
           >
-            Chauffeur indépendant ? C'est gratuit
+            Chauffeur indépendant ? Dès 10€/mois
           </a>
         </div>
 
@@ -283,7 +283,7 @@ const advantages = [
         <div class="p-8 rounded-2xl bg-white border border-gray-200">
           <h3 class="text-lg font-bold text-primary">Chauffeur indépendant</h3>
           <div class="mt-4 flex items-baseline gap-1">
-            <span class="text-4xl font-extrabold text-primary">0&euro;</span>
+            <span class="text-4xl font-extrabold text-primary">10&euro;</span>
             <span class="text-text-muted">/mois</span>
           </div>
           <p class="mt-2 text-sm text-text-muted">
@@ -302,7 +302,35 @@ const advantages = [
                   stroke-width="2"
                   d="M5 13l4 4L19 7"></path></svg
               >
-              Gestion de vos missions
+              Gestion du planning
+            </li>
+            <li class="flex items-center gap-3 text-sm">
+              <svg
+                class="w-4 h-4 text-success shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                ><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"></path></svg
+              >
+              Partage de missions
+            </li>
+            <li class="flex items-center gap-3 text-sm">
+              <svg
+                class="w-4 h-4 text-success shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                ><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"></path></svg
+              >
+              Génération des bons de mission
             </li>
             <li class="flex items-center gap-3 text-sm">
               <svg
@@ -337,7 +365,7 @@ const advantages = [
             href="https://pro.heroad.app"
             class="mt-8 w-full inline-flex items-center justify-center px-6 py-3 rounded-xl border-2 border-primary text-primary text-sm font-bold hover:bg-primary hover:text-white transition-colors"
           >
-            Commencer gratuitement
+            Essai gratuit 14 jours
           </a>
         </div>
 
@@ -370,7 +398,7 @@ const advantages = [
                   stroke-width="2"
                   d="M5 13l4 4L19 7"></path></svg
               >
-              Tout du plan gratuit
+              Tout du plan Chauffeur indépendant
             </li>
             <li class="flex items-center gap-3 text-sm text-gray-200">
               <svg
